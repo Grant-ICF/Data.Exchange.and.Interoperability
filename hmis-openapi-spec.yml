@@ -5199,3 +5199,199 @@ components:
           nullable: true
       required:
         - EnrollmentID
+ Exit:
+      type: object
+      properties:
+        exitId:
+          type: string
+          maxLength: 32
+          description: Unique identifier
+        enrollmentId:
+          type: string
+          maxLength: 32
+          description: Enrollment Id
+        personalId:
+          type: string
+          maxLength: 32
+          description: Personal Id
+        exitDate:
+          type: string
+          format: date
+          description: Exit date
+        destination:
+          type: integer
+          description: Destination
+          $ref: '#/components/schemas/LivingSituation'
+        destinationSubsidyType:
+          type: integer
+          nullable: true
+          description: Destination subsidy type
+          $ref: '#/components/schemas/RentalSubsidyType'
+        otherDestination:
+          type: string
+          maxLength: 50
+          nullable: true
+          description: Other destination
+        housingAssessment:
+          type: integer
+          description: Housing assessment at exit
+          $ref: '#/components/schemas/HousingAssesmentAtExit'
+        subsidyInformation:
+          type: integer
+          nullable: true
+          description: Includes data for W5.A and W5.B.
+          $ref: '#/components/schemas/SubsidyInformation'
+        projectCompletionStatus:
+          type: integer
+          description: Project completion status
+          $ref: '#/components/schemas/ProjectCompletionStatus'
+        earlyExitReason:
+          type: integer
+          nullable: true
+          description: Expelled reason
+          $ref: '#/components/schemas/ExpelledReason'
+        exchangeForSex:
+          type: integer
+          description: Exchange for sex
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        exchangeForSexPastThreeMonths:
+          type: integer
+          nullable: true
+          description: Exchange for sex past three months
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        countOfExchangeForSex:
+          type: integer
+          nullable: true
+          description: Count of exchange for sex
+          $ref: '#/components/schemas/CountExchangeForSex'
+        askedOrForcedToExchangeForSex:
+          type: integer
+          nullable: true
+          description: Asked or forced to exchange for sex
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        askedOrForcedToExchangeForSexPastThreeMonths:
+          type: integer
+          nullable: true
+          description: Asked or forced to exchange for sex past three months
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        workplaceViolenceThreats:
+          type: integer
+          description: Workplace violence threats
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        workplacePromiseDifference:
+          type: integer
+          description: Workplace promise difference
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        coercedToContinueWork:
+          type: integer
+          nullable: true
+          description: Coerced to continue work
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        laborExploitPastThreeMonths:
+          type: integer
+          nullable: true
+          description: Labor exploit past three months
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        counselingReceived:
+          type: integer
+          description: Counseling received
+          $ref: '#/components/schemas/NoYesMissing'
+        individualCounseling:
+          type: integer
+          nullable: true
+          description: Individual counseling
+          $ref: '#/components/schemas/NoYesMissing'
+        familyCounseling:
+          type: integer
+          nullable: true
+          description: Family counseling
+          $ref: '#/components/schemas/NoYesMissing'
+        groupCounseling:
+          type: integer
+          nullable: true
+          description: Group counseling
+          $ref: '#/components/schemas/NoYesMissing'
+        sessionCountAtExit:
+          type: integer
+          nullable: true
+          description: Session count at exit
+        postExitCounselingPlan:
+          type: integer
+          description: Post exit counseling plan
+          $ref: '#/components/schemas/NoYesMissing'
+        sessionsInPlan:
+          type: integer
+          nullable: true
+          description: Sessions in plan
+        destinationSafeClient:
+          type: integer
+          description: Destination safe for client
+          $ref: '#/components/schemas/NoYesReasonsForMissingData'
+        destinationSafeWorker:
+          type: integer
+          description: Destination safe for worker
+          $ref: '#/components/schemas/WorkerResponse'
+        posAdultConnections:
+          type: integer
+          description: Positive adult connections
+          $ref: '#/components/schemas/WorkerResponse'
+        posPeerConnections:
+          type: integer
+          description: Positive peer connections
+          $ref: '#/components/schemas/WorkerResponse'
+        posCommunityConnections:
+          type: integer
+          description: Positive community connections
+          $ref: '#/components/schemas/WorkerResponse'
+        aftercareDate:
+          type: string
+          format: date
+          nullable: true
+          description: Aftercare date
+        aftercareProvided:
+          type: integer
+          nullable: true
+          description: Aftercare provided
+          $ref: '#/components/schemas/AftercareProvided'
+        emailSocialMedia:
+          type: integer
+          nullable: true
+          description: Email or social media contact
+          $ref: '#/components/schemas/NoYesMissing'
+        telephone:
+          type: integer
+          nullable: true
+          description: Telephone contact
+          $ref: '#/components/schemas/NoYesMissing'
+        inPersonIndividual:
+          type: integer
+          nullable: true
+          description: In-person individual contact
+          $ref: '#/components/schemas/NoYesMissing'
+        inPersonGroup:
+          type: integer
+          nullable: true
+          description: In-person group contact
+          $ref: '#/components/schemas/NoYesMissing'
+        cmExitReason:
+          type: integer
+          nullable: true
+          description: Case management exit reason
+          $ref: '#/components/schemas/CMExitReason'
+        dateCreated:
+          type: string
+          format: date-time
+          description: Date created
+        dateUpdated:
+          type: string
+          format: date-time
+          description: Date updated
+        userId:
+          type: string
+          maxLength: 32
+          description: User ID
+        dateDeleted:
+          type: string
+          format: date-time
+          nullable: true
+          description: Date deleted
